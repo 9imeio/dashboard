@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-board-report',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoardReportComponent implements OnInit {
 
-  constructor() { }
+  board = {}
+
+  constructor(private data: DataService, public router :Router) { }
 
   ngOnInit() {
+    this.board = this.getBoard();
   }
 
+  getBoard() {
+    return this.data.getData().home;
+  }
+
+
+
+
 }
+

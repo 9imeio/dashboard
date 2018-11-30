@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 
 
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./board-pizza.component.css']
 })
 export class BoardPizzaComponent {
+
+  board = {}
 
   public doughnutChartLabels: string[] = ['Erro', 'Pagamento', 'Cancelamento', '2 via', 'Dúvidas'];
   public barChartOptions: any = {
@@ -29,7 +32,7 @@ export class BoardPizzaComponent {
   }
   ];
 
-  constructor() { }
+  constructor(private data: DataService) { }
 
   public chartClicked(e: any): void {
     console.log(e);
@@ -39,6 +42,9 @@ export class BoardPizzaComponent {
     console.log(e);
   }
 
+  // getBoard() {
+  //   return this.data.getData().home;
+  // }
 
 
 }

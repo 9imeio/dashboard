@@ -16,6 +16,7 @@ import { ChartsModule } from 'ng2-charts';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { DataService } from './data.service';
 
 
 
@@ -37,7 +38,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     MDBBootstrapModule.forRoot()
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
