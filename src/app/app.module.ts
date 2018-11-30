@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +14,9 @@ import { BoardWordsComponent } from './board-words/board-words.component';
 
 import { ChartsModule } from 'ng2-charts';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
+
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
 
 
 @NgModule({
@@ -30,8 +33,10 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ChartsModule
+    ChartsModule,
+    MDBBootstrapModule.forRoot()
   ],
+  schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],
   bootstrap: [AppComponent]
 })
